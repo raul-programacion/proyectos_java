@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="agendafx3.FXMLVistaController">
+    <children>
+        <Label fx:id="label" layoutX="126" layoutY="120" minHeight="16" minWidth="69" />
+      <SplitPane dividerPositions="0.7" prefHeight="500.0" prefWidth="801.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="498.0" prefWidth="450.0">
+               <children>
+                  <TableView fx:id="tablaPersonas" prefHeight="500.0" prefWidth="555.0">
+                    <columns>
+                      <TableColumn fx:id="nombreCL" prefWidth="140.0" text="Nombre" />
+                      <TableColumn fx:id="apellidoCL" prefWidth="165.0" text="Apellido" />
+                        <TableColumn fx:id="edadCL" text="Edad" />
+                        <TableColumn fx:id="telefonoCL" prefWidth="170.0" text="Telefono" />
+                    </columns>
+                  </TableView>
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <Label layoutX="13.0" layoutY="33.0" text="Nombre">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="12.0" layoutY="106.0" text="Apellido">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="12.0" layoutY="181.0" text="Edad">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="10.0" layoutY="249.0" text="Telefono">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="nombreTF" layoutX="13.0" layoutY="60.0" prefHeight="26.0" prefWidth="209.0" />
+                  <TextField fx:id="apellidoTF" layoutX="13.0" layoutY="141.0" prefHeight="26.0" prefWidth="209.0" />
+                  <TextField fx:id="edadTF" layoutX="13.0" layoutY="212.0" prefHeight="26.0" prefWidth="209.0" />
+                  <TextField fx:id="telefonoTF" layoutX="13.0" layoutY="276.0" prefHeight="26.0" prefWidth="209.0" />
+                  <Button fx:id="aniadirBT" layoutX="15.0" layoutY="324.0" mnemonicParsing="false" onAction="#aniadir" prefHeight="26.0" prefWidth="209.0" text="Añadir">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="modificarBT" layoutX="15.0" layoutY="361.0" mnemonicParsing="false" onAction="#modificar" prefHeight="26.0" prefWidth="209.0" text="Modificar">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="eliminarBT" layoutX="15.0" layoutY="399.0" mnemonicParsing="false" onAction="#eliminar" prefHeight="26.0" prefWidth="209.0" text="Eliminar">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="nuevoBT" layoutX="15.0" layoutY="438.0" mnemonicParsing="false" onAction="#nuevo" prefHeight="49.0" prefWidth="209.0" text="Nuevo !!!">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Button>
+               </children></AnchorPane>
+        </items>
+      </SplitPane>
+    </children>
+</AnchorPane>
