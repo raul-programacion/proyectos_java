@@ -49,9 +49,33 @@ public class Persona {
         this.dni=dni;
     }
     
-    public void setLibroTitulo(String nombre)
+    public void setPersonaNombre(String nombre)
     {
         this.nombre=nombre;
     }
+    
+    public void setLibroList(Libro auxLibro)
+    {
+       prestamo.add(auxLibro);
+    }
+    
+    public void getLibroList()
+    {
+        
+         for(int i = 0;i<prestamo.size();i++)
+         {
+            System.out.println(prestamo.get(i).getLibroIsbn());
+            System.out.println(prestamo.get(i).getLibroTitulo());
+         }
+       
+         
+         //http://puntocomnoesunlenguaje.blogspot.com.es/2012/12/arraylist-en-java.html
+       /*for(Persona tmpLibro:Libro){
+            System.out.println("Nombre del libro: " + tmpLibro.getLibroIsbn());
+        }*/
+    }
+    
+    
+    
     
 }
