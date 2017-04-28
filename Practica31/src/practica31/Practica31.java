@@ -85,12 +85,18 @@ public class Practica31 {
            System.out.println("Dame isbn Ejemplar1");
            isbn = sc.nextLine();
            
+           auxEjemplar.setEjemplarIsbn(isbn);
+           auxEjemplar.setEjemplarCodigo(codigoEjemplar);
+           
            book.setLibroNodoList(auxEjemplar);
            
            System.out.println("Dame codigo Ejemplar2");
            codigoEjemplar = sc.nextLine();
            System.out.println("Dame isbn Ejemplar2");
            isbn = sc.nextLine();
+           
+           auxEjemplar.setEjemplarIsbn(isbn);
+           auxEjemplar.setEjemplarCodigo(codigoEjemplar);
            
            book.setLibroNodoList(auxEjemplar);
            
