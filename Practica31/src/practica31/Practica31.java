@@ -6,6 +6,7 @@
 package practica31;
 
 import java.util.ArrayList;
+import java.util.Scanner;
 
 /**
  *
@@ -18,18 +19,24 @@ public class Practica31 {
      */
     public static void main(String[] args) {
         
-        int i;
+        int i,j;
+        int max=2;
+        
+        Scanner sc = new Scanner(System.in);
+        String codigo,codigoEjemplar;
+        String titulo,isbn;
+
         
         ArrayList<LibroNodo> biblioteca;
         
         biblioteca = new ArrayList<LibroNodo>();
         
         
-        LibroNodo book = new LibroNodo();
+       
         LibroNodo auxbook = new LibroNodo();
-        Ejemplar auxEjemplar = new Ejemplar();
+        //Ejemplar auxEjemplar = new Ejemplar();
         
-        book.setLibroNodoCodigo("111777555");
+       /* book.setLibroNodoCodigo("111777555");
         book.setLibroNodoTitulo("Mio Cid");
         
         auxEjemplar.setEjemplarIsbn("x111");
@@ -44,27 +51,68 @@ public class Practica31 {
         
         biblioteca.add(book);
         
-        LibroNodo book2 = new LibroNodo();
-        Ejemplar auxEjemplar2 = new Ejemplar();
+        //LibroNodo book2 = new LibroNodo();
+        //Ejemplar auxEjemplar2 = new Ejemplar();
         
-        book2.setLibroNodoCodigo("222999444");
-        book2.setLibroNodoTitulo("Quijote");
+        book.setLibroNodoCodigo("222999444");
+        book.setLibroNodoTitulo("Quijote");
         
-        auxEjemplar2.setEjemplarIsbn("x222");
-        auxEjemplar2.setEjemplarCodigo("z222");
+        auxEjemplar.setEjemplarIsbn("x222");
+        auxEjemplar.setEjemplarCodigo("z222");
         
-        book2.setLibroNodoList(auxEjemplar2);
+        book.setLibroNodoList(auxEjemplar);
         
-        auxEjemplar2.setEjemplarIsbn("x222");
-        auxEjemplar2.setEjemplarCodigo("z333");
+        auxEjemplar.setEjemplarIsbn("x222");
+        auxEjemplar.setEjemplarCodigo("z333");
         
-        book2.setLibroNodoList(auxEjemplar2);
+        book.setLibroNodoList(auxEjemplar);
         
-        biblioteca.add(book2);
+        biblioteca.add(book);*/
+         
+       
+      for(j = 0; j<max ;j++)
+       {
+           System.out.println("Dame codigo Libro");
+           codigo = sc.nextLine();
+           System.out.println("Dame titulo Libro");
+           titulo = sc.nextLine();
+           
+           LibroNodo book = new LibroNodo(codigo,titulo);
+           Ejemplar auxEjemplar = new Ejemplar();
+           
+           System.out.println("Dame codigo Ejemplar1");
+           codigoEjemplar = sc.nextLine();
+           System.out.println("Dame isbn Ejemplar1");
+           isbn = sc.nextLine();
+           
+           book.setLibroNodoList(auxEjemplar);
+           
+           System.out.println("Dame codigo Ejemplar2");
+           codigoEjemplar = sc.nextLine();
+           System.out.println("Dame isbn Ejemplar2");
+           isbn = sc.nextLine();
+           
+           book.setLibroNodoList(auxEjemplar);
+           
+           
+           
+          
+          
+          
+          
+          
+            biblioteca.add(book);
+           
+            
+           
+       //biblioteca.add(new LibroNodo("111777555","Mio Cid"));
+       
+       //biblioteca.add(new LibroNodo("222999444","El Quijote"));
+       
+       }
         
         
-        
-        
+     
         
         
         for(i = 0;i<biblioteca.size();i++)

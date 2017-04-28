@@ -16,13 +16,21 @@ public class LibroNodo {
     private String cod_lib;
     private String titulo;
     
-     private ArrayList<Ejemplar> copia;
+    private ArrayList<Ejemplar> copia;
     
     
     public LibroNodo()
     {
         this.copia = new ArrayList<Ejemplar>();
     }
+    
+    public LibroNodo(String cod_lib,String titulo)
+    {
+        this.cod_lib=cod_lib;
+        this.titulo=titulo;
+        this.copia = new ArrayList<Ejemplar>();
+    }
+    
     
     
     public String getLibroNodoCodigo ()
