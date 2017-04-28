@@ -24,7 +24,9 @@ public class Practica31 {
         
         biblioteca = new ArrayList<LibroNodo>();
         
+        
         LibroNodo book = new LibroNodo();
+        LibroNodo auxbook = new LibroNodo();
         Ejemplar auxEjemplar = new Ejemplar();
         
         book.setLibroNodoCodigo("111777555");
@@ -36,17 +38,51 @@ public class Practica31 {
         book.setLibroNodoList(auxEjemplar);
         
         auxEjemplar.setEjemplarIsbn("x111");
-        auxEjemplar.setEjemplarCodigo("z222");
+        auxEjemplar.setEjemplarCodigo("z777");
         
         book.setLibroNodoList(auxEjemplar);
         
         biblioteca.add(book);
         
+        LibroNodo book2 = new LibroNodo();
+        Ejemplar auxEjemplar2 = new Ejemplar();
+        
+        book2.setLibroNodoCodigo("222999444");
+        book2.setLibroNodoTitulo("Quijote");
+        
+        auxEjemplar2.setEjemplarIsbn("x222");
+        auxEjemplar2.setEjemplarCodigo("z222");
+        
+        book2.setLibroNodoList(auxEjemplar2);
+        
+        auxEjemplar2.setEjemplarIsbn("x222");
+        auxEjemplar2.setEjemplarCodigo("z333");
+        
+        book2.setLibroNodoList(auxEjemplar2);
+        
+        biblioteca.add(book2);
+        
+        
+        
+        
+        
+        
         for(i = 0;i<biblioteca.size();i++)
          {
+            System.out.println("========================================"); 
+            System.out.println("Libro"); 
+            System.out.println("------------------------"); 
             System.out.println(biblioteca.get(i).getLibroNodoCodigo());
             System.out.println(biblioteca.get(i).getLibroNodoTitulo());
+            //System.out.println(biblioteca.get(i));
+            System.out.println("------------------------");
+            System.out.println("Ejemplares en biblioteca"); 
+            System.out.println("------------------------"); 
+            auxbook=biblioteca.get(i);
+            auxbook.getLibroNodoList();
+            
             //System.out.println(biblioteca.get(i).getLibroNodoList());
+            System.out.println("========================================");
          }
         
         
