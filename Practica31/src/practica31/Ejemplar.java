@@ -5,8 +5,6 @@
  */
 package practica31;
 
-import java.util.ArrayList;
-
 /**
  *
  * @author adminprofe
@@ -16,6 +14,29 @@ public class Ejemplar {
     private String isbn;
     private String cod_ejemp;
     
-     private ArrayList<LibroNodo> copias;
+    
+    public String getEjmeplarIsbn ()
+    {
+        return isbn;
+    }
+    
+    public String getEjemplarCodigo ()
+    {
+        return cod_ejemp;
+    }
+    
+    public void setEjemplarIsbn(String isbn)
+    {
+        this.isbn=isbn;
+    }
+    
+    public void setEjemplarCodigo(String cod_ejemp)
+    {
+        this.cod_ejemp=cod_ejemp;
+    }
+    
+    
+     
+     
     
 }

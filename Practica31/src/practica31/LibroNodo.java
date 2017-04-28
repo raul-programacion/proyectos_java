@@ -5,6 +5,8 @@
  */
 package practica31;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author adminprofe
@@ -14,38 +16,55 @@ public class LibroNodo {
     private String cod_lib;
     private String titulo;
     
-    
+     private ArrayList<Ejemplar> copia;
     
     
     public LibroNodo()
     {
-        
+        this.copia = new ArrayList<Ejemplar>();
     }
     
-    public LibroNodo(String cod_lib,String titulo)
-    {
-        this.cod_lib=cod_lib;
-        this.titulo=titulo;
-    }
     
-    public String getLibroIsbn ()
+    public String getLibroNodoCodigo ()
     {
         return cod_lib;
     }
     
-    public String getLibroTitulo ()
+    public String getLibroNodoTitulo ()
     {
         return titulo;
     }
     
-    public void setLibroIsbn(String cod_lib)
+    public void setLibroNodoCodigo(String cod_lib)
     {
         this.cod_lib=cod_lib;
     }
     
-    public void setLibroTitulo(String titulo)
+    public void setLibroNodoTitulo(String titulo)
     {
         this.titulo=titulo;
     }
+    
+     public void setLibroNodoList(Ejemplar auxEjemplar)
+    {
+       copia.add(auxEjemplar);
+    }
+    
+    public void getLibroNodoList()
+    {
+        
+         for(int i = 0;i<copia.size();i++)
+         {
+            System.out.println(copia.get(i).getEjmeplarIsbn());
+            System.out.println(copia.get(i).getEjemplarCodigo());
+         }
+       
+         
+         //http://puntocomnoesunlenguaje.blogspot.com.es/2012/12/arraylist-en-java.html
+       /*for(Persona tmpLibro:Libro){
+            System.out.println("Nombre del libro: " + tmpLibro.getLibroIsbn());
+        }*/
+    }
+    
     
 }
