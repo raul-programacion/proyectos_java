@@ -88,8 +88,8 @@
                            </padding>
                         </HBox>
                         <DatePicker GridPane.columnIndex="1" GridPane.rowIndex="5" />
-                        <ComboBox prefHeight="26.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="6" />
-                        <ComboBox prefHeight="26.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                        <ComboBox fx:id="cmbCarrera" prefHeight="26.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                        <ComboBox fx:id="cmbCentroEstudio" prefHeight="26.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="7" />
                      </children>
                   </GridPane>
                   <HBox layoutX="37.0" layoutY="343.0" prefHeight="61.0" prefWidth="364.0" spacing="8.0">

@@ -15,7 +15,7 @@ import java.sql.SQLException;
 
 public class Conexion {
     
-    private Connection connection;
+        private Connection connection;
 	private String url = "jdbc:mysql://localhost/db_alumnos";
 	private String usuario = "root";
 	private String contrasena = "";
